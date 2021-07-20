@@ -1,6 +1,8 @@
 <h1>Editing Meeting</h1>
+<br>
 
 <%= render 'form', meeting: @meeting %>
 
-<%= link_to 'Show', @meeting %> |
-<%= link_to 'Back', meetings_path %>
+<br>
+<%= link_to 'Show', @meeting , class: "btn btn-secondary"%>
+<%= link_to 'Back', meetings_path, class: "btn btn-secondary"%>

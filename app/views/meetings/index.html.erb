@@ -1,9 +1,7 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Meetings</h1>
 
-<table>
-  <thead>
+<table class="table table-striped table-hover">
+  <thead class="table-dark">
     <tr>
       <th>Meeting name</th>
       <th>Organiser</th>
@@ -29,5 +27,4 @@
 </table>
 
 <br>
-
-<%= link_to 'New Meeting', new_meeting_path %>
+<%= link_to 'New Meeting', new_meeting_path, class:'btn btn-secondary' %>

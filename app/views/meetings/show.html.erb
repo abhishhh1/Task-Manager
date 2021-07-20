@@ -1,24 +1,17 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Meeting name:</strong>
-  <%= @meeting.meeting_name %>
-</p>
-
-<p>
-  <strong>Organiser:</strong>
-  <%= @meeting.organiser %>
-</p>
-
-<p>
-  <strong>Start time:</strong>
-  <%= @meeting.start_time %>
-</p>
-
-<p>
-  <strong>Endtime:</strong>
-  <%= @meeting.endtime %>
-</p>
-
-<%= link_to 'Edit', edit_meeting_path(@meeting) %> |
-<%= link_to 'Back', meetings_path %>
+<div class="jumbotron">
+  <h1 class="display-4"><%= @meeting.meeting_name %></h1>
+  <p class="lead">
+    <strong>Organiser:</strong>
+    <%= @meeting.organiser %>
+  </p>
+  <hr class="my-4">
+  <p>
+    <strong>Start time:</strong>
+    <%= @meeting.start_time %>
+    <br>
+    <strong>End Time:</strong>
+    <%= @meeting.endtime %>
+  </p>
+  <%= link_to 'Edit', edit_meeting_path(@meeting), class: 'btn btn-secondary' %>
+  <%= link_to 'Back', meetings_path, class: 'btn btn-secondary' %>
+</div>
