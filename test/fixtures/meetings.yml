@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  meeting_name: MyString
+  organiser: MyString
+  start_time: 2021-07-20 17:09:52
+  endtime: 2021-07-20 17:09:52
+
+two:
+  meeting_name: MyString
+  organiser: MyString
+  start_time: 2021-07-20 17:09:52
+  endtime: 2021-07-20 17:09:52
