@@ -30,6 +30,10 @@
     <%= form.label :endtime %>
     <%= form.datetime_select :endtime, class:'form-select' %>
   </div>
+  <br>
+  <div class="field form-group">
+    <%= form.number_field :user_id, id: :meeting_user_id, value: current_user.id, class:'form-control' , placeholder:"User Id", type: :hidden %>
+  </div>
 <br>
   <div class="actions">
     <%= form.submit class:"btn btn-primary" %>

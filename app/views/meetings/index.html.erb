@@ -13,15 +13,17 @@
 
   <tbody>
     <% @meetings.each do |meeting| %>
-      <tr>
-        <td><%= meeting.meeting_name %></td>
-        <td><%= meeting.organiser %></td>
-        <td><%= meeting.start_time %></td>
-        <td><%= meeting.endtime %></td>
-        <td><%= link_to 'Show', meeting %></td>
-        <td><%= link_to 'Edit', edit_meeting_path(meeting) %></td>
-        <td><%= link_to 'Destroy', meeting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <% if meeting.user_id == current_user.id %>
+        <tr>
+          <td><%= meeting.meeting_name %></td>
+          <td><%= meeting.organiser %></td>
+          <td><%= meeting.start_time %></td>
+          <td><%= meeting.endtime %></td>
+          <td><%= link_to 'Show', meeting %></td>
+          <td><%= link_to 'Edit', edit_meeting_path(meeting) %></td>
+          <td><%= link_to 'Destroy', meeting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>
